@@ -51,29 +51,18 @@ body {
 }
 
 main {
-  max-width: 1120px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 2.5rem 1.5rem 4rem;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 2.25rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.25rem;
 }
-
-.highlight {
-  color: #f97316;
-}
-
-.subtitle {
-  color: #6b7280;
-  font-size: 1rem;
-  margin: 0 0 1.75rem 0;
-}
-
-.search-input {
+input {
   width: 100%;
   padding: 0.85rem 1.15rem;
   font-size: 0.95rem;
@@ -90,74 +79,145 @@ main {
   border-color: #f97316;
 }
 
+.empty {
+  color: #71717a;
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #ececec;
-  border-radius: 16px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
 }
 
-.card-art {
-  height: 125px;
+.card-banner {
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+}
+
+.card-banner .emoji {
+  font-size: 3.5rem;
 }
 
 .card-body {
-  padding: 1.15rem;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.card h3 {
-  margin: 0 0 0.45rem 0;
-  font-size: 1.05rem;
+.card-body h2 {
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #111827;
+  margin-bottom: 0.4rem;
 }
 
-.card-desc {
-  margin: 0 0 1.1rem 0;
-  font-size: 0.85rem;
-  line-height: 1.45;
-  color: #6b7280;
+.card-body p {
+  color: #52525b;
+  font-size: 0.925rem;
+  margin-bottom: 1rem;
   flex: 1;
 }
 
-.card-meta {
+.meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-.pill {
-  font-size: 0.75rem;
+  gap: 0.5rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  background-color: #f3f4f6;
-  color: #4b5563;
+  color: #3f3f46;
 }
 
-.pill-cuisine {
-  background-color: #fff7ed;
-  color: #ea580c;
+.meta span {
+  background: #f4f4f5;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+}
+
+.recipe-detail {
+  max-width: 760px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #52525b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  color: #18181b;
+}
+
+.recipe-hero {
+  padding: 2.25rem;
+  border-radius: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.recipe-hero .emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.recipe-hero h1 {
+  margin-bottom: 0.5rem;
+}
+
+.recipe-hero p {
+  color: #3f3f46;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-hero .meta span {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.recipe-section {
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 1rem;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.recipe-section h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #52525b;
+  margin-bottom: 0.9rem;
+}
+
+.recipe-section ul,
+.recipe-section ol {
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
 }

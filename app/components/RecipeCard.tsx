@@ -1,20 +1,23 @@
+import Link from "next/link";
 import type { Recipe } from "../data/recipes";
 
 export default function RecipeCard({ recipe }: { recipe: Recipe }) {
   return (
-    <div className="card">
-      <div className="card-art" style={{ background: recipe.gradient }}>
-        {recipe.emoji}
+    <Link href={`/recipe/${recipe.id}`} className="card">
+      <div className="card-banner" style={{ background: recipe.gradient }}>
+        <span className="emoji" role="img" aria-label={recipe.title}>
+          {recipe.emoji}
+        </span>
       </div>
       <div className="card-body">
-        <h3>{recipe.title}</h3>
-        <p className="card-desc">{recipe.description}</p>
-        <div className="card-meta">
-          <span className="pill">⏱ {recipe.minutes} min</span>
-          <span className="pill">{recipe.difficulty}</span>
-          <span className="pill pill-cuisine">{recipe.cuisine}</span>
+        <h2>{recipe.title}</h2>
+        <p>{recipe.description}</p>
+        <div className="meta">
+          <span>⏱ {recipe.minutes} min</span>
+          <span>{recipe.difficulty}</span>
+          <span>{recipe.cuisine}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
